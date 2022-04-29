@@ -1,0 +1,27 @@
+{
+  "name": "rl_mafiabot",
+  "version": "1.0.0",
+  "description": "Discord bot to facilitate Rocket League Mafia",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABSmith4/RL_mafiaBot.git"
+  },
+  "author": "Ahmad Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ABSmith4/RL_mafiaBot/issues"
+  },
+  "homepage": "https://github.com/ABSmith4/RL_mafiaBot#readme",
+  "devDependencies": {
+    "eslint": "^8.14.0"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.9.0",
+    "discord.js": "^13.6.0",
+    "fs": "^0.0.1-security"
+  }
+}
