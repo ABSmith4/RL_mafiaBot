@@ -1,16 +1,15 @@
 const fs = require('fs');
+const { REST } = require('@discordjs/rest');
+const { Routes } = require('discord-api-types/v10');
 
-// eslint-disable-next-line no-unused-vars
-module.exports = (client, _Discord) => {
-	const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWith('.js'));
 
-	for (const file of commandFiles) {
-		const command = require(`../commands/${file}`);
-		if (command.name) {
+module.exports = (client) => {
+	client.handleCommands =
+	for (const folder of commandFolders){
+		const commandFiles = fs.readdirSync(`./src/commands/${dirs}`).filter(file => file.endsWith('.js'));
+		for (const file of commandFiles) {
+			const command = require(`../commands/${folder}/${file}`);
 			client.commands.set(command.name, command);
 		}
-		else {
-			continue;
-		}
-	}
+	};
 };
